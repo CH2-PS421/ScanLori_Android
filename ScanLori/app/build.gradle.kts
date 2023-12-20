@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-kapt")
-    id("kotlin-android-extensions")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -62,13 +62,16 @@ dependencies {
 
     implementation("androidx.appcompat:appcompat:1.4.0")
     implementation("androidx.room:room-runtime:2.5.0")
-//    kapt("androidx.room:room-compiler:2.5.0")
+    kapt("androidx.room:room-compiler:2.5.0")
     implementation("androidx.room:room-ktx:2.5.0")
     implementation("androidx.preference:preference-ktx:1.1.1")
     implementation("com.squareup.moshi:moshi-kotlin:1.9.3")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
     implementation("com.google.dagger:hilt-android:2.38.1")
-//    kapt("com.google.dagger:hilt-android-compiler:2.38.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.38.1")
 
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
 }
